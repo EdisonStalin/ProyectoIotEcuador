@@ -75,17 +75,26 @@ WSGI_APPLICATION = 'IotEcuadorWeb.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
+#inhabilitar DB_Default.
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+'''
 
-
-
-
-
+#Coneccion MongoDB: Djongo_version [3.0.5]
+DATABASES = {
+        'default': {
+        'ENGINE': 'djongo',
+        "NAME": 'Iot_Devices',
+        'HOST': 'mongodb+srv://edison:GnzNw2aAyJjKGOs7@iotecuador.qbeh8.mongodb.net/Iot_Devices?retryWrites=true&w=majority',
+        'USER': 'edison',
+        'PASSWORD': 'GnzNw2aAyJjKGOs7',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

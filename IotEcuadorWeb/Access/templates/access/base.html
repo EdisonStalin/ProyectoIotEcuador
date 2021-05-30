@@ -1,6 +1,8 @@
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {%load static%}
 
@@ -8,26 +10,23 @@
     <link href="{% static 'Access/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 
      <!-- Fonts -->
-    
-     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
-     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
      
 
     <!-- Styles -->
     <link href="{% static 'Access/css/gestion.css'%}" rel="stylesheet">
+
+
 </head>
 
 <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <span class="site-heading-lower">Dispositivos IotEcuador</span>
-      </h1>
 
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Inicio' %}">Gestión de Pedidos</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Inicio' %}">Iot_Ecuador</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +36,7 @@
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Inicio' %}">Inicio</a>
           </li>
           <li class="nav-item {%if request.path == '/dashboard' %} active {%endif%} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Dashboard' %}">Dashboard</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Dashboard' %}">Resultado</a>
           </li>
           <li class="nav-item {%if request.path == '/search' %} active {%endif%} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Search' %}">Consulta</a>
@@ -49,6 +48,9 @@
       </div>
     </div>
   </nav>
+</header>
+
+
 
 
     <!-- Contenido que cambiara  -->
@@ -59,42 +61,28 @@
   
 
     <!-- Footer -->
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0">
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	    </p>
-        <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
-		</p>
-        <p class="m-0 mbt1">&copy; Edison Jumbo</p>
+    
+    <footer>
+      <div class="contenedor-footer">
+          <div class="content-foo">
+              <h4>ESFOT</h4>
+              <p></p>
+          </div>
+          <div class="content-foo">
+              <h4>Email</h4>
+              <p>usuario@epn.edu.ec</p>
+          </div>
+          <div class="content-foo">
+              <h4>Escuela Politécnica Nacional</h4>
+              <p>Quito-Ecuador</p>
+          </div>
       </div>
-	</footer>
+      <h2 class="titulo-final">&copy; Jefferson Llumiquinga | Edison Jumbo</h2>
+  </footer>
 
     <!-- Bootstrap -->
     <script src="{% static 'Access/vendor/jquery/jquery.min.js'%}"></script>
     <script src="{% static 'Access/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
-
-
 </html>

@@ -4,44 +4,129 @@
 
   {%block content%}
   <!-- Heading -->
-   <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'Access/img/principal.jpg'%}" alt="">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper"></span>
-            <span class="section-heading-lower">Qué es Iot</span>
-          </h2>
-          <p> La agrupación e interconexión de dispositivos y objetos a través de una red 
-            (bien sea privada o Internet, la red de redes), dónde todos ellos podrían ser visibles e 
-            interaccionar. Respecto al tipo de objetos o dispositivos podrían ser cualquiera, 
-            desde sensores y dispositivos mecánicos hasta objetos cotidianos como pueden ser el frigorífico, el calzado o la ropa..
-          </p>
-         
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  
-    <!-- Message -->
-    <section class="page-section cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Sabías?</span>
-                <span class="section-heading-lower">Impulso de IoT del 1.0 al 2.0</span>
-              </h2>
-              <p >La nueva generación de internet de las cosas, impulsada por Wifi 6 y el 5G, permitirá conectar 25 000 millones de dispositivos.
-                <br>
-                Con la introducción de avances tecnológicos como Wifi 6, 5G o el Narrow Band IoT, el panorama de los dispositivos conectados cambiará. Se evolucionará desde la actual generación de IoT a un IoT 2.0 durante 2021.</p>
-            </div>
+  <main>
+    <section class="contenedor sobre-iot">
+      <h2 class="titulo">Internet of things</h2>
+      <div class="contenedor-sobre-iot">
+          <img src="{% static 'Access/img/iot2.jpg' %}" alt="" class="imagen-about-iot">
+          <div class="contenido-textos">
+              <h3> Qué es Iot?</h3>
+              <p>La primera «cosa» conectada al Internet se creó en 1982: fue una máquina de refrescos en la Universidad Carnegie Mellon en Pittsburgh,
+                 Pensilvania, que informaba el número y la temperatura de las bebidas que contenía. Era único en aquel entonces, pero en algún momento 
+                 en 2008 o 2009, la cantidad de cosas conectadas a Internet superó la población humana mundial por primera vez en la historia.</p>
           </div>
-        </div>
       </div>
-    </section>
+  </section>
+  </main>
+
+
+
+  <section class="portafolio">
+    <div class="contenedor"equipos>
+        <h2 class="titulo">Busqueda</h2>
+        <div class="galeria-port">
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    <p>camara web</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot1.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>Servidores</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot2.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>router</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>Nuestro trabajo</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot1.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>Nuestro trabajo</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot2.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>Nuestro trabajo</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    
+                    <p>Nuestro trabajo</p>
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="{% static 'Access/img/iot1.jpg' %}"  alt="">
+                <div class="hover-galeria">
+                    <p>Nuestro trabajo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team contenedor">
+  <h2 class="titulo">Acerca de nosotros</h2>
+  <div class="cards">
+      <div class="card">
+          <img src="{% static 'Access/img/iot1.jpg' %}" alt="">
+          <div class="contenido-texto-card">
+              <h4>Jefferson Llumiquinga</h4>
+              <p>Tecnólogo en Análisis de Sistemas Informáticos</p>
+
+          </div>
+      </div>
+      <div class="card">
+          <img src="{% static 'Access/img/iot.jpg' %}" alt="">
+          <div class="contenido-texto-card">
+              <h4>Edison Jumbo</h4>
+              <p>Tecnólogo en Análisis de Sistemas Informáticos</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="about-services">
+  <div class="contenedor">
+      <h2 class="titulo">Nuestros servicios</h2>
+      <div class="servicio-cont">
+          <div class="servicio-ind">
+              <img src="{% static 'Access/img/iot2.jpg' %}" alt="">
+              <h3>Name</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+          </div>
+          <div class="servicio-ind">
+              <img src="{% static 'Access/img/iot1.jpg' %}" alt="">
+              <h3>Name</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+          </div>
+          <div class="servicio-ind">
+              <img src="{% static 'Access/img/iot.jpg' %}"alt="">
+              <h3>Name</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
     {%endblock%}

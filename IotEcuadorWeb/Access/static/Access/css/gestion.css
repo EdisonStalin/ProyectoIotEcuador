@@ -1,285 +1,487 @@
-body {
-  font-family: 'Lora';
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg,rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root{
-  --blue--font: rgb(8, 23, 64);
+  /*Primary*/
+--color-primary-100: #DBF6F7;
+--color-primary-200: #B9E9EF;
+--color-primary-300: #8AC4D0;
+--color-primary-400: #5D91A2;
+--color-primary-500: #2C5364;
+--color-primary-600: #204256;
+--color-primary-700: #163248;
+--color-primary-800: #0E233A;
+--color-primary-900: #081930;
+  /*Success*/
+--color-success-100: #E2FAD5;
+--color-success-200: #C0F5AE;
+--color-success-300: #91E27F;
+--color-success-400: #63C55A;
+--color-success-500: #2CA02C;
+--color-success-600: #208929;
+--color-success-700: #167326;
+--color-success-800: #0E5C22;
+--color-success-900: #084C20;
+  /*Info*/
+--color-info-100: #C9FBF5;
+--color-info-200: #94F7F3;
+--color-info-300: #5DE3E8;
+--color-info-400: #34C0D2;
+--color-info-500: #0093B5;
+--color-info-600: #00729B;
+--color-info-700: #005682;
+--color-info-800: #003D68;
+--color-info-900: #002C56;
+  /*Warning*/
+--color-warning-100: #FFF5CE;
+--color-warning-200: #FFE99E;
+--color-warning-300: #FFDA6D;
+--color-warning-400: #FFCB49;
+--color-warning-500: #FFB20D;
+--color-warning-600: #DB9109;
+--color-warning-700: #B77306;
+--color-warning-800: #935804;
+--color-warning-900: #7A4402;
+  /*Danger*/
+--color-danger-100: #FBE3CB;
+--color-danger-200: #F8C299;
+--color-danger-300: #EC9465;
+--color-danger-400: #D9683E;
+--color-danger-500: #c12e09;
+--color-danger-600: #A51A06;
+--color-danger-700: #8A0B04;
+--color-danger-800: #6F0205;
+--color-danger-900: #5C010A;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Raleway';
+body {
+  font-family: 'open sans';
+  background: linear-gradient(rgba(47, 23, 15, 0.76), rgba(47, 23, 15, 0.685)), url("../img/iot.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
 }
 
-p {
-  line-height: 1.05em;
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: var(--color-primary-100);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+
+header {
+  width: 100%;
+  background-attachment: fixed;
+  position: relative;
+}
+
+nav{
+    text-align: center;
+    background-color: var(--color-info-700);
+    color: var(--color-info-100);
+}
+
+nav li{
+  margin: 0 5px 0 5px;
+
+  
+}
+
+nav > a{
+  color:#fff;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+  
+}
+
+nav > a:hover{
+  text-decoration: underline;
+  
+}
+
+header .textos-header{
+  display: flex;
+  height: 430px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textos-header h1{
+  font-size: 50px;
+  color:var(--color-info-100);
+}
+
+.textos-header h2{
+  font-size: 30px;
+  font-weight: 300;
+  color:var(--color-info-100);
+}
+
+.wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*main*/
+main .sobre-iot{
+  padding: 30px 0 60px 0;
+  
+}
+.contenedor-sobre-iot{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagen-about-iot{
+  width: 48%;
+}
+
+.sobre-iot .contenido-textos{
+  width: 50%;
+}
+
+.contenido-textos h3{
+  margin: 0 0 15px 0;
+  text-align: center;
+  color:var(--color-info-200);
+ 
+}
+
+
+.contenido-textos p{
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+  color: white;
+}
+
+/* Galeria */
+
+
+.portafolio{
+  background-color: var(--color-info-700);
+}
+
+.galeria-port{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+
+.imagen-port{
+  width: 24%;
+  height: 200px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hover-galeria{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: var(--color-info-500);
+  transition: transform .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.hover-galeria img{
+  width: 50px;
+}
+
+.hover-galeria p{
+  color: var(--color-warning-500);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.imagen-port:hover .hover-galeria{
+  transform: scale(1);
+}
+
+/* Our - team */
+
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards .card{
+  background: var(--color-info-700);
+  display: flex;
+  width: 46%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+}
+
+.cards .card > .contenido-texto-card{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+/*  Our servicios */
+
+.about-services{
+  background: var(--color-info-700);
+  padding-bottom: 30px;
+}
+
+.servicio-cont{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicio-ind{
+  width: 28%;
+  text-align: center;
+}
+
+.servicio-ind img{
+  width: 90%;
+}
+
+.servicio-ind h3{
+  margin: 10px 0;
+  
+}
+
+.servicio-ind p{
+  font-weight: 300;
   text-align: justify;
 }
 
-.text-faded {
-  color: rgba(255, 255, 255, 0.3);
+/*footer*/
+
+footer{
+  background:rgba(0, 0, 0, .5);
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden;
 }
 
-.site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: 'Raleway';
+.contenedor-footer{
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ccc;
 }
 
-.site-heading .site-heading-upper {
-  display: block;
-  font-size: 2rem;
-  font-weight: 800;
+.content-foo{
+  text-align: center;
 }
 
-.site-heading .site-heading-lower {
-  font-size: 5rem;
-  font-weight: 100;
-  line-height: 4rem;
+.content-foo h4{
+  color: #fff;
+  border-bottom: 3px solid var(--color-info-500);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-.page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.content-foo p{
+  color: #ccc;
 }
 
-.section-heading {
-  text-transform: uppercase;
+.titulo-final{
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #9e9797;
 }
 
-.section-heading .section-heading-upper {
-  display: block;
-  font-size: 1rem;
-  font-weight: 800;
-  padding-bottom:.5rem;
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
 
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* Clientes */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
 }
 
-.section-heading .section-heading-lower {
-  display: block;
-  font-size: 3rem;
-  font-weight: 100;
-}
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
 
+    nav > a{
+        margin-right: 5px;
+    }
 
-.section-heading .section-heading-under {
-  display: block;
-  font-size: 1rem;
-  text-transform: none;
-  font-weight: 300;
-  margin-top:.5rem;
-}
+    .textos-header h1{
+        font-size: 35px;
+      
+    }
 
-.bg-faded {
-  background-color: rgba(255, 255, 255, 0.85);
-}
+    .textos-header h2{
+        font-size: 20px;
+    }
 
-#mainNav {
-  background-color: var(--blue--font);
-  font-family: 'Raleway';
-}
+    /* ABOUT US */
+  
 
-#mainNav .navbar-brand {
-  color: #ffffff;
-}
+    .imagen-about-iot{
+        margin-bottom: 60px;
+        width: 0%;
+    }
 
-#mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 800;
-}
+    .sobre-iot .contenido-textos{
+        width: 95%;
+    }
 
-#mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #ffffff;
-  text-decoration: underline;
-}
+    /* Galeria */
 
-@media (min-width: 992px) {
-  #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
-    text-decoration: underline;
-  }
-  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
-  }
-}
+    .imagen-port{
+        width: 95%;
+    }
 
-.btn-xl {
-  font-weight: 700;
-  font-size: 0.8rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+    /* Clients */
 
-.intro {
-  position: relative;
-}
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: left;
-  }
-  .intro .intro-text {
-    left: 600;
-    width: 60%;
-    margin-top: 3rem;
-    background-color: var(--blue--font);
-    color: cornsilk;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
 
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
+    /* Footer */
 
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
-}
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
 
-.cta .cta-inner {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-  background-color: var(--blue--font);
-  color: cornsilk;
-}
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
 
-.cta .cta-inner:before {
-  border-radius: 0.5rem;
-  content: '';
-  position: absolute;
-  top: -0.5rem;
-  bottom: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
-}
+    .content-foo h4{
+        border: none;
+    }
 
-.cta .cta-innerv {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
-}
+    .content-foo p{
+        color: var(--color-primary-300);
+        border-bottom: 1px solid var(--color-primary-500);
+        padding-bottom: 20px;
+    }
 
-@media (min-width: 992px) {
-  .about-heading .about-heading-img {
-    position: relative;
-    z-index: 0;
-  }
-  .about-heading .about-heading-content {
-    margin-top: -5rem;
-    position: relative;
-    z-index: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .product-item .product-item-title {
-    position: relative;
-    z-index: 1;
-    margin-bottom: -3rem;
-  }
-  .product-item .product-item-img {
-    position: relative;
-    z-index: 0;
-    max-width: 60vw;
-  }
-  .product-item .product-item-description {
-    position: relative;
-    z-index: 1;
-    margin-top: -3rem;
-    max-width: 50vw;
-  }
-}
-
-
-
-@media (min-width: 992px) {
-  .list-hours {
-    width: 50%;
-    font-size: 1.1rem;
-  }
-}
-
-.address strong {
-  font-size: 1.2rem;
-}
-
-.footer {
-   background-color: var(--blue--font);
-}
-
-
-
-.btn {
-  box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
-}
-
-
-
-.font-weight-light {
-  font-weight: 100 !important;
-}
-
-.mbtm{
-  padding-top: 5rem;
-}
-
-.mbt{
-  padding-top: 2rem;
-}
-
-.mbt1{
-  padding-top: 1.25rem;
-}
-
-a.link{
-  color: rgba(255, 255, 255, 0.7);
-}
-
-a.link:hover{
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.section-content{
-  font-family: 'Lora' !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 28px !important;
-}
-
-ul.errorlist{
-  padding-top: .75rem;
-  font-style: italic;
-  color: red;
+    .titulo-final{
+        font-size: 20px;
+    }
 }
