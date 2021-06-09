@@ -89,8 +89,8 @@ DATABASES = {
 DATABASES = {
         'default': {
         'ENGINE': 'djongo',
-        "NAME": 'Iot_Devices',
-        'HOST': 'mongodb+srv://edison:GnzNw2aAyJjKGOs7@iotecuador.qbeh8.mongodb.net/Iot_Devices?retryWrites=true&w=majority',
+        "NAME": 'iotecuador',
+        'HOST': 'mongodb+srv://edison:GnzNw2aAyJjKGOs7@iotecuador.qbeh8.mongodb.net/iotecuador?retryWrites=true&w=majority',
         'USER': 'edison',
         'PASSWORD': 'GnzNw2aAyJjKGOs7',
     }

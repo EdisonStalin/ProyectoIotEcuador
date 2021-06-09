@@ -18,16 +18,15 @@ def search(request):
     return render(request, "Access/search.html")
 
 def register(request):
-    if request.method == "POST":  
-        form = UserForm(request.POST)  
+    if request.method == "POST":  #enviar los datos de la view register
+        form = UserForm(request.POST)
         if form.is_valid():  
             try:  
-                form.save()  
-                return redirect('Access/search.html')  
+                form.save()
+                return redirect('/busqueda') 
+
             except:  
                 pass  
     else:  
         form = UserForm()  
     return render(request,'Access/register.html',{'form':form})  
-
- 
